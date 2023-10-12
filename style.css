@@ -1,34 +1,90 @@
+/* here are only global styles */
+
 /* base colors */
 :root {
-    --theme1-main: #343436;
-    --theme1-text: #dda64e;
-    --theme1-button: #dda64e95;
-    --theme2-main: #eaa53f;
-    --theme2-text: #edeae9;
-    --theme2-button: #ca543b;
-    --theme3-main: #de9592;
-    --theme3-text: #766175;
-    --theme3-button: #6f6e6f;
-  }
+  --theme1-main: #343436;
+  --theme1-text: #dda64e;
+  --theme1-button: #dda64e95;
+  --theme2-main: #eaa53f;
+  --theme2-text: #edeae9;
+  --theme2-button: #ca543b;
+  --theme3-main: #de9592;
+  --theme3-text: #766175;
+  --theme3-button: #6f6e6f;
+}
 
-  body {
-    overflow-x: hidden;
-    font-family: "Reem Kufi", sans-serif;
-  }
+body {
+  overflow-x: hidden;
+  font-family: "Reem Kufi", sans-serif;
+}
 
 header {
-    position: sticky;
-    display: flex;
-    width: 100vw;
-    height: auto;
-    
+  position: sticky;
+  display: flex;
+  width: 100vw;
+  height: auto;
+}
+
+/* NAVs */
+.nav a {
+  text-decoration: none;
+  font-size: larger;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
-    height: auto;
-    margin: 1%;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  height: auto;
+  margin: 1%;
+  padding: 1%;
+}
+
+/* mobile */
+
+@media (max-width: 600px) {
+  .mobile-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    visibility: hidden;
+    margin-left: 20px;
+  }
+
+  .mobile-nav a {
     padding: 1%;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  .nav-toggle {
+    display: block;
+    height: max-content;
+    font-size: 300%;
+    position: fixed;
+    right: 1%;
+    top: 1%;
+    z-index: 1;
+    cursor: pointer;
+    border: none;
+    transform: translate(-30px, 0);
+    border-radius: 10px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.active {
+    display: block;
+  }
 }
