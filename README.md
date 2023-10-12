@@ -1,5 +1,8 @@
 # QuizHub
 
+[![Live Website](https://img.shields.io/badge/Live%20Website-QuizHub-brightgreen)](https://quizhublearn.netlify.app)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Ppaja/quizhub)](https://github.com/Ppaja/quizhub)
+
 Welcome to the QuizHub team! Here, you will find all the information you need to contribute effectively to the project.
 
 ## Table of Contents
