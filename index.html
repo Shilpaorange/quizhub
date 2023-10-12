@@ -12,30 +12,26 @@
     />
 
     <style>
-      /* MAIN */
-      main {
-        display: flex;
-        flex-direction: column;
-      }
-      #popular {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-      }
+          /* MAIN */
+          main {
+            display: flex;
+            flex-direction: column;
+          }
+          #popular {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+      grid-gap: 10px; /
+          }
 
-      @media (max-width: 600px) {
-        #popular {
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: 1fr;
-          grid-column-gap: 10px;
-          grid-row-gap: 10px;
-        }
-      }
-
-      
+          @media (max-width: 600px) {
+            #popular {
+              display: grid;
+              grid-template-columns: 1fr;
+              grid-template-rows: 1fr;
+              grid-column-gap: 10px;
+              grid-row-gap: 10px;
+            }
+          }
     </style>
   </head>
   <body>
@@ -61,13 +57,14 @@
     </header>
 
     <main>
-      <div id="popular">
+      <div id="popular-container">
         <h2>Popular</h2>
-        <br />
-        <div class="card" id="section-1"></div>
-        <div class="card" id="section-2"></div>
-        <div class="card" id="section-3"></div>
-        <div class="card" id="section-4"></div>
+        <div id="popular">
+          <div class="card" id="section-1"></div>
+          <div class="card" id="section-2"></div>
+          <div class="card" id="section-3"></div>
+          <div class="card" id="section-4"></div>
+        </div>
       </div>
     </main>
 
