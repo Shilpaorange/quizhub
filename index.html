@@ -6,24 +6,16 @@
     <title>QuizHub</title>
     <link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Reem+Kufi:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Reem+Kufi:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-      .nav-toggle
-      {
-        display: none;
-      }
-
-      .mobile-nav {
-        display: none;
-      }
-
+      /* MAIN */
       main {
         display: flex;
         flex-direction: column;
-        
       }
       #popular {
         display: grid;
@@ -37,47 +29,6 @@
         background-color: blue;
         height: 100px;
         width: 100%;
-      }
-
-      /* mobile */
-
-      @media (max-width: 600px) {
-        .mobile-nav {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
-          visibility: hidden;
-          margin-left: 20px;
-        }
-
-        .mobile-nav a {
-          padding: 1%;
-          font-size: 20px;
-          text-decoration: none;
-          margin: 10px;
-        }
-
-        .nav-toggle {
-          display: block;
-          height: max-content;
-          font-size: 300%;
-          position: fixed;
-          right: 1%;
-          top: 1%;
-          z-index: 1;
-          cursor: pointer;
-          border: none;
-          transform: translate(-30px, 0);
-          border-radius: 10px;
-        }
-
-        .nav {
-          display: none;
-        }
-
-        .nav.active {
-          display: block;
-        }
       }
     </style>
   </head>
@@ -106,31 +57,16 @@
     <main>
       <div id="popular">
         <h2>Popular</h2>
-        <br/>
+        <br />
         <div class="card" id="section-1"></div>
         <div class="card" id="section-2"></div>
         <div class="card" id="section-3"></div>
+        <div class="card" id="section-4"></div>
       </div>
     </main>
 
     <script src="index.js"></script>
     <script src="theme.js"></script>
-    <script>
-      // toggle mobile navigation
-      const mobileNav = document.getElementById("mobile-nav");
-      const navToggle = document.getElementById("nav-toggle");
-
-      let isMobileNavVisible = false;
-
-      navToggle.addEventListener("click", function () {
-        if (isMobileNavVisible) {
-          mobileNav.style.visibility = "hidden";
-          isMobileNavVisible = false;
-        } else {
-          mobileNav.style.visibility = "visible";
-          isMobileNavVisible = true;
-        }
-      });
-    </script>
+    <script></script>
   </body>
 </html>
