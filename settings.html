@@ -38,8 +38,26 @@
     </style>
   </head>
   <body>
-    
-    <a href="index.html">back (dev)</a>
+    <header>
+      <h1>QuizHub</h1>
+      <a id="nav-toggle" class="nav-toggle">☰</a>
+
+      <!-- Nav PC -->
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="about.html">About</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+
+      <!-- Nav Mobile -->
+      <nav id="mobile-nav" class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="about.html">About</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+    </header>
     <div id="settings-container">
       <h1 class="header">Settings:</h1>
       <div id="theme-container">
@@ -49,7 +67,7 @@
         <button class="theme-button" id="theme3Button">pink/silver</button>
       </div>
     </div>
-
+    <script src="index.js"></script>
     <script src="theme.js"></script>
     <script>
       const theme1Button = document.getElementById("theme1Button");
@@ -75,7 +93,7 @@
         localStorage.setItem("theme", "theme3");
         localStorage.removeItem("theme1");
         localStorage.removeItem("theme2");
-      })
+      });
     </script>
   </body>
 </html>
