@@ -12,6 +12,9 @@
   --theme3-text: #766175;
   --theme3-button: #6f6e6f;
 }
+.title {
+  background-color:red;
+}
 
 body {
   overflow-x: hidden;
