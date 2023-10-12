@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizHub</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+      #popular {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+      }
+
+      .card {
+        background-color: blue;
+        height: 100px;
+        width: 100%;
+      }
+
+      /* mobile */
+
+      @media (max-width: 600px) {
+        .mobile-nav {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          visibility: hidden;
+          margin-left: 20px;
+        }
+
+        .mobile-nav a {
+          padding: 1%;
+        }
+
+        .nav-toggle {
+          display: block;
+          height: max-content;
+          font-size: 300%;
+          position: fixed;
+          right: 1%;
+          top: 1%;
+          z-index: 1;
+          cursor: pointer;
+          border: none;
+          transform: translate(-30px, 0);
+          border-radius: 10px;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .nav.active {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>QuizHub</h1>
+      <a id="nav-toggle" class="nav-toggle">☰</a>
+
+      <!-- Nav PC -->
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="about.html">About</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+
+      <!-- Nav Mobile -->
+      <nav id="mobile-nav" class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="about.html">About</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+    </header>
+
+    <main>
+      <div id="popular">
+        <h2>Popular</h2>
+        <br />
+        <div class="card" id="section-1"></div>
+        <div class="card" id="section-2"></div>
+        <div class="card" id="section-3"></div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+    <script src="theme.js"></script>
+    <script>
+      // toggle mobile navigation
+      const mobileNav = document.getElementById("mobile-nav");
+      const navToggle = document.getElementById("nav-toggle");
+
+      let isMobileNavVisible = false;
+
+      navToggle.addEventListener("click", function () {
+        if (isMobileNavVisible) {
+          mobileNav.style.visibility = "hidden";
+          isMobileNavVisible = false;
+        } else {
+          mobileNav.style.visibility = "visible";
+          isMobileNavVisible = true;
+        }
+      });
+    </script>
+  </body>
+</html>

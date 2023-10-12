@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizHub Settings</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #settings-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px black;
+        width: auto;
+        height: auto;
+      }
+
+      .header {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      #theme-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .theme-button {
+        margin: 10px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">back (dev)</a>
+    <div id="settings-container">
+      <h1 class="header">Settings:</h1>
+      <div id="theme-container">
+        <h2>Select Theme:</h2>
+        <button class="theme-button" id="theme1Button">gray/yellow</button>
+        <button class="theme-button" id="theme2Button">yellow-red</button>
+        <button class="theme-button" id="theme3Button">pink/silver</button>
+      </div>
+    </div>
+
+    <script src="theme.js"></script>
+    <script>
+      const theme1Button = document.getElementById("theme1Button");
+      const theme2Button = document.getElementById("theme2Button");
+      const theme3Button = document.getElementById("theme3Button");
+
+      theme1Button.addEventListener("click", () => {
+        theme1();
+        localStorage.setItem("theme", "theme1");
+        localStorage.removeItem("theme2");
+        localStorage.removeItem("theme3");
+      });
+
+      theme2Button.addEventListener("click", () => {
+        theme2();
+        localStorage.setItem("theme", "theme2");
+        localStorage.removeItem("theme1");
+        localStorage.removeItem("theme3");
+      });
+
+      theme3Button.addEventListener("click", () => {
+        theme3();
+        localStorage.setItem("theme", "theme3");
+        localStorage.removeItem("theme1");
+        localStorage.removeItem("theme2");
+      })
+    </script>
+  </body>
+</html>
