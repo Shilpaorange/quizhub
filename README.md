@@ -14,7 +14,7 @@ Welcome to the QuizHub team! Here, you will find all the information you need to
 
 Before diving into the project, it's helpful to have the following tools and resources:
 
-- [Git Documentation on W3Schools](https://www.w3schools.com/git/): A valuable resource for learning Git, a version control system that will be essential for collaborating on the project.
+- [Git Documentation on W3Schools](https://www.w3schools.com/git/): A valuable resource for learning Git, a version control system. Not really important for this project if you use GitHub Desktop, but still good to know. 
 
 - [GitHub Desktop](https://desktop.github.com/): GitHub Desktop provides a user-friendly interface for working with Git and GitHub repositories.
 
