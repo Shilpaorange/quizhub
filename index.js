@@ -1,4 +1,4 @@
-// toggle mobile navigation
+// mobile navigation
 const mobileNav = document.getElementById("mobile-nav");
 const navToggle = document.getElementById("nav-toggle");
 
